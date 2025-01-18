@@ -12,25 +12,49 @@
             class="px-4 py-2 border border-indigo-500 text-indigo-500 rounded-lg hover:bg-indigo-100">Products</a>
         <a href="#"
             class="px-4 py-2 border border-indigo-500 text-indigo-500 rounded-lg hover:bg-indigo-100">Category</a>
-        <a href="{{ route('about') }}"
+        <a href="#footer"
             class="px-4 py-2 border border-indigo-500 text-indigo-500 rounded-lg hover:bg-indigo-100">About</a>
     </div>
 
     <!-- Icons -->
     <div class="flex space-x-4">
-        <button class="text-indigo-500 hover:text-indigo-600">
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
-                <mask id="mask0_60_156" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25"
-                    height="25">
-                    <rect x="0.154205" y="0.912781" width="24" height="24" fill="#D9D9D9" />
-                </mask>
-                <g mask="url(#mask0_60_156)">
-                    <path
-                        d="M19.7542 21.9128L13.4542 15.6128C12.9542 16.0128 12.3792 16.3294 11.7292 16.5628C11.0792 16.7961 10.3875 16.9128 9.65421 16.9128C7.83754 16.9128 6.30004 16.2836 5.04171 15.0253C3.78337 13.7669 3.15421 12.2294 3.15421 10.4128C3.15421 8.59611 3.78337 7.05861 5.04171 5.80028C6.30004 4.54195 7.83754 3.91278 9.65421 3.91278C11.4709 3.91278 13.0084 4.54195 14.2667 5.80028C15.525 7.05861 16.1542 8.59611 16.1542 10.4128C16.1542 11.1461 16.0375 11.8378 15.8042 12.4878C15.5709 13.1378 15.2542 13.7128 14.8542 14.2128L21.1542 20.5128L19.7542 21.9128ZM9.65421 14.9128C10.9042 14.9128 11.9667 14.4753 12.8417 13.6003C13.7167 12.7253 14.1542 11.6628 14.1542 10.4128C14.1542 9.16278 13.7167 8.10028 12.8417 7.22528C11.9667 6.35028 10.9042 5.91278 9.65421 5.91278C8.40421 5.91278 7.34171 6.35028 6.46671 7.22528C5.59171 8.10028 5.15421 9.16278 5.15421 10.4128C5.15421 11.6628 5.59171 12.7253 6.46671 13.6003C7.34171 14.4753 8.40421 14.9128 9.65421 14.9128Z"
-                        fill="#1C1B1F" />
-                </g>
-            </svg>
-        </button>
+        <div class="max-w-sm">
+            <!-- SearchBox -->
+            <div class="relative"
+                data-hs-combo-box='{
+              "groupingType": "default",
+              "isOpenOnFocus": true,
+              "apiUrl": "../assets/data/searchbox.json",
+              "apiGroupField": "category",
+              "outputItemTemplate": "<div data-hs-combo-box-output-item><span class=\"flex items-center cursor-pointer py-2 px-4 w-full text-sm text-gray-800 hover:bg-gray-100"><div class=\"flex items-center w-full\"><div class=\"flex items-center justify-center rounded-full bg-gray-200 size-6 overflow-hidden me-2.5\"><img class=\"shrink-0\" data-hs-combo-box-output-item-attr=&apos;[{\"valueFrom\": \"image\", \"attr\": \"src\"}, {\"valueFrom\": \"name\", \"attr\": \"alt\"}]&apos; /></div><div data-hs-combo-box-output-item-field=\"name\" data-hs-combo-box-search-text data-hs-combo-box-value></div></div><span class=\"hidden hs-combo-box-selected:block\"><svg class=\"shrink-0 size-3.5 text-blue-600" xmlns=\"http:.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"></polyline></svg></span></span></div>",
+              "groupingTitleTemplate": "<div class=\"text-xs uppercase text-gray-500 m-3 mb-1"></div>"
+            }'>
+                <div class="relative">
+                    <div class="absolute inset-y-0 start-0 flex items-center pointer-events-none z-20 ps-3.5">
+                        <svg class="shrink-0 size-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.3-4.3"></path>
+                        </svg>
+                    </div>
+                    <input
+                        class="py-3 ps-10 pe-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                        type="text" role="combobox" aria-expanded="false" placeholder="Type a name" value=""
+                        data-hs-combo-box-input="">
+                </div>
+
+                <!-- SearchBox Dropdown -->
+                <div class="absolute z-50 w-full bg-white border border-gray-200 rounded-lg" style="display: none;"
+                    data-hs-combo-box-output="">
+                    <div class="max-h-72 rounded-b-lg overflow-hidden overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300"
+                        data-hs-combo-box-output-items-wrapper=""></div>
+                </div>
+                <!-- End SearchBox Dropdown -->
+            </div>
+            <!-- End SearchBox -->
+        </div>
+
         <button class="text-indigo-500 hover:text-indigo-600">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                 <mask id="mask0_23_51" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="32"
@@ -44,8 +68,10 @@
                 </g>
             </svg>
         </button>
-        <a href="{{route('asu')}}">
-            <button class="text-indigo-500 hover:text-indigo-600">
+        <div class="m-1 hs-dropdown relative inline-flex">
+            <button id="hs-dropdown-default" type="button"
+                class="hs-dropdown-toggle focus:outline-none disabled:opacity-50 disabled:pointer-events-none"
+                aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
                     fill="none">
                     <mask id="mask0_23_40" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="32"
@@ -59,6 +85,22 @@
                     </g>
                 </svg>
             </button>
+
+            <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-60 bg-transparent shadow-md rounded-lg mt-2 dark:bg-neutral-800 dark:border dark:border-neutral-700 dark:divide-neutral-700 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full"
+                role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-default">
+                <div class="p-1 space-y-0.5">
+                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700"
+                        href="{{ route('login') }}" target="_blank">
+                        Login
+                    </a>
+                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700"
+                        href="{{ route('register') }}" target="_blank">
+                        Register
+                    </a>
+                </div>
+            </div>
+        </div>
+
         </a>
     </div>
 </nav>
