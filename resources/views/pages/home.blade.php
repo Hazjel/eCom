@@ -5,7 +5,8 @@
 @endsection
 
 @section('content')
-    <div class="flex flex-col items-center justify-center h-screen">
+    <div style="background-image: url('https://cdn.mos.cms.futurecdn.net/AVEcca7TuDmt8wjaFZPkzj-650-80.jpg.webp');"
+        class="bg-no-repeat bg-center bg-cover flex flex-col items-center justify-center h-screen">
         <h1 class="text-4xl font-bold text-gray-800">Welcome to eCommerce</h1>
         <p class="text-lg text-gray-600 mt-4">The best place to shop online</p>
     </div>
