@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\HomeControlller;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,3 +31,5 @@ route::get('/login', [AuthController::class, 'login'])->name('login');
 route::get('/register', [AuthController::class, 'register'])->name('register');
 
 route::get('/resetPassword', [AuthController::class, 'resetPassword'])->name('reset-password');
+
+route::get('/products', [ProductController::class, 'products'])->name('products');

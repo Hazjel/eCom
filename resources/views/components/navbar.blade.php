@@ -1,4 +1,4 @@
-<nav class="flex items-center justify-between px-6 h-[96px] border-b shadow">
+<nav class="flex items-center justify-between px-6 h-[96px] border-b shadow sticky top-0 bg-white z-50">
     <!-- Logo -->
     <div class="flex items-center">
         <img src="{{ asset('images/logo.png') }}" alt="Logo" class="h-32 w-32">
