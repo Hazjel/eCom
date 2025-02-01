@@ -20,10 +20,7 @@ Route::get('/', function () {
     return view('pages.home');
 })->name('home');
 
-Route::get('/about', function () {
-    return view('pages.about');
-})->name('about');
-
+Route::get('/about', [HomeControlller::class, 'about'])->name('about');
 route::get('/search', [HomeControlller::class, 'search'])->name('search');
 
 route::get('/login', [AuthController::class, 'login'])->name('login');
