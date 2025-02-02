@@ -5,10 +5,31 @@
 @endsection
 
 @section('content')
+
     <div style="background-image: url('https://cdn.mos.cms.futurecdn.net/AVEcca7TuDmt8wjaFZPkzj-650-80.jpg.webp');"
         class="bg-no-repeat bg-center bg-cover flex flex-col items-center justify-center h-screen">
         <h1 class="text-4xl font-bold text-gray-800">Welcome to eCommerce</h1>
         <p class="text-lg text-gray-600 mt-4">The best place to shop online</p>
+    </div>
+
+    <div class="container mx-auto">
+        <h1 class="text-3xl font-bold mb-6 text-center">Products</h1>
+
+        <!-- Container with scrollable content -->
+        <div class="overflowx-x-auto">
+            <div class="flex gap-6 py-4">
+                @foreach ($products as $product)
+                    <div class="w-48 p-6 border border-gray-300 rounded-lg shadow-lg">
+                        <div class="text-lg font-bold mb-2">{{ $product->name}}</div>
+                        <div class="text-green-600 text-lg">{{ number_format($product->price, 2, ',', '.') }}</div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+
+        <div>
+            <button>See More</button>
+        </div>
     </div>
 
     <div class="h-screen "></div>
@@ -93,3 +114,4 @@
         </div>
     </footer>
 @endsection
+

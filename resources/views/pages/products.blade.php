@@ -5,8 +5,8 @@
 @endsection
 
 @section('content')
-    <div class="container mx-auto">
-        <h1 class="text-2x1 font-bold mb-6">Products</h1>
+    {{-- <div class="container mx-auto">
+        <h1 class="text-3xl font-bold mb-6 text-center">Products</h1>
 
         <!-- Container with scrollable content -->
         <div class="overflowx-x-auto">
@@ -19,5 +19,5 @@
                 @endforeach
             </div>
         </div>
-    </div>
+    </div> --}}
 @endsection

@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\products;
 use Illuminate\Http\Request;
 
 class HomeControlller extends Controller
 {
     public function home()
     {
-        return view('home');
+        $products = products::all();
+        return view('pages.home', compact('products'));
     }
 
     public function about()
@@ -20,4 +22,6 @@ class HomeControlller extends Controller
     {
         return view('user');
     }
+
+
 }
