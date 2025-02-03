@@ -8,7 +8,7 @@
     <div class="flex space-x-4">
         <a href="{{ route('home') }}"
             class="px-4 py-2 border border-indigo-500 text-indigo-500 rounded-lg hover:bg-indigo-100">Home</a>
-        <a href="{{ route('products') }}"
+        <a href="#products"
             class="px-4 py-2 border border-indigo-500 text-indigo-500 rounded-lg hover:bg-indigo-100">Products</a>
         <a href="#"
             class="px-4 py-2 border border-indigo-500 text-indigo-500 rounded-lg hover:bg-indigo-100">Category</a>

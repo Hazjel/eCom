@@ -12,8 +12,8 @@
         <p class="text-lg text-gray-600 mt-4">The best place to shop online</p>
     </div>
 
-    <div class="container mx-auto">
-        <h1 class="text-3xl font-bold mb-6 text-center gap-4 mt-20">Products</h1>
+    <div class="container mx-auto" id="products">
+        <h1 class="text-3xl font-bold mb-6 text-center mt-10">Products</h1>
 
         <!-- Container with scrollable content -->
         <div class="overflowx-x-auto">
@@ -27,7 +27,7 @@
             </div>
         </div>
 
-        <div class="flex justify-center mt-6">
+        <div class="flex justify-center">
             <a href="{{ route('products') }}"
                class="px-4 py-2 border border-indigo-500 text-indigo-500 rounded-lg hover:bg-indigo-100">View all products</a>
         </div>
