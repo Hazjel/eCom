@@ -13,7 +13,7 @@
     </div>
 
     <div class="container mx-auto">
-        <h1 class="text-3xl font-bold mb-6 text-center">Products</h1>
+        <h1 class="text-3xl font-bold mb-6 text-center gap-4 mt-20">Products</h1>
 
         <!-- Container with scrollable content -->
         <div class="overflowx-x-auto">
@@ -27,8 +27,9 @@
             </div>
         </div>
 
-        <div>
-            <button>See More</button>
+        <div class="flex justify-center mt-6">
+            <a href="{{ route('products') }}"
+               class="px-4 py-2 border border-indigo-500 text-indigo-500 rounded-lg hover:bg-indigo-100">View all products</a>
         </div>
     </div>
 
