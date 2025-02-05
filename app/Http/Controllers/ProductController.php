@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\products;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
     public function products()
     {
-        $products = products::all();
+        $products = Product::all();
         return view('pages.products', compact('products'));
     }
 }
