@@ -10,7 +10,7 @@
             class="px-4 py-2 border border-indigo-500 text-indigo-500 rounded-lg hover:bg-indigo-100">Home</a>
         <a href="#products"
             class="px-4 py-2 border border-indigo-500 text-indigo-500 rounded-lg hover:bg-indigo-100">Products</a>
-        <a href="#"
+        <a href="#category"
             class="px-4 py-2 border border-indigo-500 text-indigo-500 rounded-lg hover:bg-indigo-100">Category</a>
         <a href="#footer"
             class="px-4 py-2 border border-indigo-500 text-indigo-500 rounded-lg hover:bg-indigo-100">About</a>
@@ -93,14 +93,9 @@
                         href="{{ route('login') }}" target="_blank">
                         Login
                     </a>
-                    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700"
-                        href="{{ route('register') }}" target="_blank">
-                        Register
-                    </a>
                 </div>
             </div>
         </div>
-
         </a>
     </div>
 </nav>

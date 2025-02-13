@@ -27,3 +27,5 @@ route::get('/register', [AuthController::class, 'register'])->name('register');
 route::get('/resetPassword', [AuthController::class, 'resetPassword'])->name('reset-password');
 
 route::get('/products', [ProductController::class, 'products'])->name('products');
+
+route::post('/products', [ProductController::class, 'store'])->name('store');

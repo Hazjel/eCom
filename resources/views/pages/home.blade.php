@@ -19,6 +19,7 @@
             <div class="flex gap-10 py-4">
                 @foreach ($products as $product)
                     <div class="w-48 p-6 border border-gray-300 rounded-lg shadow-lg">
+                        <img src="{{ $product->image }}" alt="{{ $product->name }}" class="w-full h-48 object-cover rounded-lg">
                         <div class="text-lg font-bold mb-2">{{ $product->name }}</div>
                         <div class="text-neutral-900 text-lg">Rp {{ number_format($product->price, 2, ',', '.') }}</div>
                     </div>
@@ -30,6 +31,10 @@
             <a href="{{ route('products') }}"
                class="px-4 py-2 border border-indigo-500 text-indigo-500 rounded-lg hover:bg-indigo-100">View all products</a>
         </div>
+    </div>
+
+    <div class="container mx-auto pt-28" id="category">
+        <h1 class="text-3xl font-bold text-center">Category</h1>
     </div>
 @endsection
 
