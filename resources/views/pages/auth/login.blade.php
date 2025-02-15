@@ -21,7 +21,8 @@
         <div class="py-3 flex items-center text-xs text-gray-400 uppercase before:flex-1 before:border-t before:border-gray-200 before:me-6 after:flex-1 after:border-t after:border-gray-200 after:ms-6">Or</div>
 
         <!-- Form -->
-        <form>
+        <form action="{{ route('login-store') }}" method="POST">
+            @csrf
           <div class="grid gap-y-4">
             <!-- Form Group -->
             <div>

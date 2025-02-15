@@ -22,8 +22,24 @@
         <div class="py-3 flex items-center text-xs text-gray-400 uppercase before:flex-1 before:border-t before:border-gray-200 before:me-6 after:flex-1 after:border-t after:border-gray-200 after:ms-6">Or</div>
 
         <!-- Form -->
-        <form>
+        <form method="POST" action="{{ route('register-store') }}">
+            @csrf
           <div class="grid gap-y-4">
+            <!-- Form Group -->
+            <div>
+              <label for="name" class="block text-sm mb-2">Nama Puki</label>
+              <div class="relative">
+                <input type="text" id="name" name="name" class="py-3 px-4 block w-full border-gray-700 border-2 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none" required aria-describedby="email-error">
+                <div class="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">
+                  <svg class="size-5 text-red-500" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                  </svg>
+                </div>
+              </div>
+              <p class="hidden text-xs text-red-600 mt-2" id="email-error">Please include a valid email address so we can get back to you</p>
+            </div>
+            <!-- End Form Group -->
+
             <!-- Form Group -->
             <div>
               <label for="email" class="block text-sm mb-2">Email address</label>
@@ -56,9 +72,9 @@
 
             <!-- Form Group -->
             <div>
-              <label for="confirm-password" class="block text-sm mb-2">Confirm Password</label>
+              <label for="password_confirmation" class="block text-sm mb-2">Confirm Password</label>
               <div class="relative">
-                <input type="password" id="confirm-password" name="confirm-password" class="py-3 px-4 block w-full border-gray-700 border-2 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none" required aria-describedby="confirm-password-error">
+                <input type="password" id="password_confirmation" name="password_confirmation" class="py-3 px-4 block w-full border-gray-700 border-2 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none" required aria-describedby="confirm-password-error">
                 <div class="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">
                   <svg class="size-5 text-red-500" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
